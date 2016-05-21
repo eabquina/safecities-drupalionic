@@ -47,41 +47,88 @@
         controller: 'AppController as app'
       })
 
-		.state('app.home', {
-		  url: '/home',
-		  views: {
-			'home-tab' : {
-			  templateUrl: 'templates/home.html'
-			}
-		  }
+    .state('app.home', {
+      url: '/home',
+      views: {
+        'home-tab' : {
+          templateUrl: 'templates/home.html'
+        }
+      }
+    })
+	
+	.state('app.disclose', {
+      url: '/disclose',
+      views: {
+        'disclose-tab' : {
+          templateUrl: 'templates/disclose.html'
+        }
+      },
+    })
+	
+	.state('app.disclose.when', {
+            url: '/when',
+            templateUrl: 'templates/disclose_when.html'
 		})
-		
-		.state('app.disclose', {
-		  url: '/disclose',
-		  views: {
-			'disclose-tab' : {
-			  templateUrl: 'templates/disclose.html'
-			}
-		  }
-		})
-		.state('app.alert', {
-		  url: '/alert',
-		  views: {
-			'alert-tab' : {
-			  templateUrl: 'templates/alert.html'
-			}
-		  }
-		})
-		
-		.state('app.prevent', {
-		  url: '/prevent',
-		  views: {
-			'prevent-tab' : {
-			  templateUrl: 'templates/prevent.html'
-			}
-		  }
-		})
-		  
+	
+	.state('app.disclose.where', {
+            url: '/where',
+            templateUrl: 'templates/disclose_where.html'
+        })
+	
+	.state('app.disclose.how', {
+            url: '/how',
+            templateUrl: 'templates/disclose_how.html'
+        })
+	
+	.state('app.alert', {
+      url: '/alert',
+      views: {
+        'alert-tab' : {
+          templateUrl: 'templates/alert.html'
+        }
+      }
+    })
+	
+	  .state('app.prevent', {
+      url: '/prevent',
+      views: {
+        'prevent-tab' : {
+          templateUrl: 'templates/prevent.html'
+        }
+      }
+    })
+	
+	   .state('app.list', {
+      url: '/list',
+      views: {
+        'list-tab' : {
+          templateUrl: 'templates/list.html',
+          controller: 'ListController'
+        }
+      }
+    })
+
+    .state('app.detail', {
+      url: '/list/:aId',
+      views: {
+        'list-tab' : {
+          templateUrl: 'templates/detail.html',
+          controller: 'ListController'
+        }
+      }
+    })
+
+    .state('app.calendar', {
+      url: '/calendar',
+      views: {
+        'calendar-tab' : {
+          templateUrl: 'templates/calendar.html',
+          controller: 'CalendarController'
+        }
+      }
+    })
+	
+	  
       .state('app.tour', {
         url: '/tour',
         views: {

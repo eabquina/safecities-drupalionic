@@ -6,7 +6,8 @@
   angular
     .module('drupalionicDemo.app.controller', [])
     .controller('AppController', AppController);
-
+	
+	
   AppController.$inject = ['$state', '$ionicSideMenuDelegate', 'AuthenticationServiceConstant', 'AuthenticationService'];
 
   /** @ngInject */
@@ -54,4 +55,6 @@
 
   };
 
+
+	
 })();
