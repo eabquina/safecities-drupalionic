@@ -12,7 +12,7 @@
   /** @ngInject */
   function configFunction(DrupalApiConstant) {
     //drupal services configurations
-    DrupalApiConstant.drupal_instance = 'http://dev-drulap-headless.pantheonsite.io/';
+    DrupalApiConstant.drupal_instance = 'http://dev-safecities.pantheonsite.io/';
     DrupalApiConstant.api_endpoint += 'v1/';
   }
 

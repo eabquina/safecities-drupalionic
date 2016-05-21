@@ -43,10 +43,45 @@
       .state('app', {
         url: "/app",
         abstract: true,
-        templateUrl: "app/app.view.html",
+        templateUrl: "app/app.view2.html",
         controller: 'AppController as app'
       })
 
+		.state('app.home', {
+		  url: '/home',
+		  views: {
+			'home-tab' : {
+			  templateUrl: 'templates/home.html'
+			}
+		  }
+		})
+		
+		.state('app.disclose', {
+		  url: '/disclose',
+		  views: {
+			'disclose-tab' : {
+			  templateUrl: 'templates/disclose.html'
+			}
+		  }
+		})
+		.state('app.alert', {
+		  url: '/alert',
+		  views: {
+			'alert-tab' : {
+			  templateUrl: 'templates/alert.html'
+			}
+		  }
+		})
+		
+		.state('app.prevent', {
+		  url: '/prevent',
+		  views: {
+			'prevent-tab' : {
+			  templateUrl: 'templates/prevent.html'
+			}
+		  }
+		})
+		  
       .state('app.tour', {
         url: '/tour',
         views: {
